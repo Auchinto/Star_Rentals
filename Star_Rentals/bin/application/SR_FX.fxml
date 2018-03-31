@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basepane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <BorderPane minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #202020;">
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="applogin" fitHeight="150.0" fitWidth="200.0" onMouseEntered="#mouseEnter_login" onMouseExited="#mouseRelease_login" onMousePressed="#mousePress_login" onMouseReleased="#mouseEnter_login" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@appLOGIN.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow color="#141414" offsetX="4.0" offsetY="2.0" spread="0.2" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="aboutus" fitHeight="150.0" fitWidth="200.0" onMouseEntered="#mouseEnter_ab" onMouseExited="#mouseRelease_ab" onMousePressed="#mousePress_ab" onMouseReleased="#mouseEnter_ab" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@aboutUS.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow color="#141414" offsetX="4.0" offsetY="2.0" spread="0.2" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="contactus" fitHeight="150.0" fitWidth="200.0" onMouseEntered="#mouseEnter_con" onMouseExited="#mouseRelease_con" onMousePressed="#mousePress_con" onMouseReleased="#mouseEnter_con" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@contactUS.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow color="#141414" offsetX="4.0" offsetY="2.0" spread="0.2" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="storeGallery" fitHeight="150.0" fitWidth="200.0" onMouseEntered="#mouseEnter_gal" onMouseExited="#mouseRelease_gal" onMousePressed="#mousePress_gal" onMouseReleased="#mouseEnter_gal" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@storeGALLERY.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow color="#141414" offsetX="4.0" offsetY="2.0" spread="0.2" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </HBox>
+         </bottom>
+         <left>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@SR_Logo.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets left="30.0" top="20.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </left>
+         <right>
+            <Pane prefHeight="254.0" prefWidth="297.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane fx:id="log_tab" prefHeight="255.0" prefWidth="298.0" style="-fx-background-color: #000000;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Admin">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="169.0" prefWidth="214.0" style="-fx-background-color: #404040;">
+                                 <children>
+                                    <JFXTextField fx:id="admin_username" focusColor="#0097ff" labelFloat="true" layoutX="73.0" layoutY="67.0" prefHeight="25.0" prefWidth="153.0" promptText="Username" style="-fx-background-color: #bfbfbf;" unFocusColor="#838181">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXPasswordField fx:id="admin_password" focusColor="#0097ff" labelFloat="true" layoutX="73.0" layoutY="123.0" prefHeight="25.0" prefWidth="153.0" promptText="Password" style="-fx-background-color: #bfbfbf;" unFocusColor="#8d8c8c">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXPasswordField>
+                                    <JFXButton fx:id="admin_sign_in" buttonType="RAISED" layoutX="123.0" layoutY="169.0" onAction="#Login_Admin" ripplerFill="#00ccff" style="-fx-background-color: #606060;" text="Sign in" textFill="WHITE" />
+                                    <Label layoutX="14.0" layoutY="24.0" text="Hello Admin," textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                      <Tab style="-fx-text-base-color: #000000;" text="Customer">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #404040;">
+                                 <children>
+                                    <JFXTextField fx:id="customer_username" focusColor="#0097ff" labelFloat="true" layoutX="73.0" layoutY="67.0" prefHeight="25.0" prefWidth="153.0" promptText="Username" style="-fx-background-color: #bfbfbf;" unFocusColor="#838181">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXPasswordField fx:id="customer_password" focusColor="#0097ff" labelFloat="true" layoutX="73.0" layoutY="123.0" prefHeight="25.0" prefWidth="153.0" promptText="Password" style="-fx-background-color: #bfbfbf;" unFocusColor="#8d8c8c">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXPasswordField>
+                                    <JFXButton fx:id="customer_sign_in" buttonType="RAISED" layoutX="123.0" layoutY="169.0" onAction="#Login_Customer" ripplerFill="#00ccff" style="-fx-background-color: #606060;" text="Sign in" textFill="WHITE" />
+                                    <Label layoutX="14.0" layoutY="24.0" style="-fx-text-base-color: #ffffff;" text="Hello Customer," textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Sign Up">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #404040;">
+                                 <children>
+                                    <JFXToggleButton fx:id="toggle_admin" layoutX="189.0" layoutY="-6.0" size="7.0" text="Admin" textFill="WHITE" toggleColor="#00ff26" toggleLineColor="#02861a">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXToggleButton>
+                                    <JFXTextField fx:id="email" focusColor="#0097ff" labelFloat="true" layoutX="71.0" layoutY="47.0" prefHeight="25.0" prefWidth="153.0" promptText="Email - ID" style="-fx-background-color: #bfbfbf;" unFocusColor="#838181" />
+                                    <JFXTextField fx:id="pref_username" focusColor="#0097ff" labelFloat="true" layoutX="71.0" layoutY="96.0" prefHeight="25.0" prefWidth="153.0" promptText="Preferred Username" style="-fx-background-color: #bfbfbf;" unFocusColor="#838181">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXPasswordField fx:id="pref_password" focusColor="#0097ff" labelFloat="true" layoutX="71.0" layoutY="147.0" prefHeight="25.0" prefWidth="153.0" promptText="Preferred Password" style="-fx-background-color: #bfbfbf;" unFocusColor="#8d8c8c">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXPasswordField>
+                                    <JFXButton buttonType="RAISED" layoutX="121.0" layoutY="186.0" onAction="#Sign_Up" ripplerFill="#00ccff" style="-fx-background-color: #606060;" text="Sign up" textFill="WHITE" />
+                                    <Label layoutX="13.0" layoutY="8.0" style="-fx-text-base-color: #ffffff;" text="Please enter your details" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <Pane fx:id="pane_abt_us" prefHeight="255.0" prefWidth="298.0" style="-fx-background-color: #404040;" visible="false">
+                     <children>
+                        <Label layoutX="14.0" layoutY="38.0" text="About Us&#10;This is Auchinto Chatterjee&#10;From CSE Dept&#10;In RV College&#10;In Bangalore" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_con_us" prefHeight="254.0" prefWidth="298.0" style="-fx-background-color: #404040;" visible="false">
+                     <children>
+                        <Label layoutX="14.0" layoutY="52.0" text="Hello &#10;Auchinto&#10;9902426560&#10;auchinto@gmail.com" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_gal" prefHeight="254.0" prefWidth="298.0" style="-fx-background-color: #404040;" visible="false">
+                     <children>
+                        <Label layoutX="14.0" layoutY="75.0" text="GALLERY" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="34.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+               <effect>
+                  <DropShadow color="#141414" offsetX="4.0" offsetY="2.0" spread="0.2" />
+               </effect>
+            </Pane>
+         </right>
+         <top>
+            <Pane BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="12.0" text="Status :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="status" layoutX="68.0" layoutY="2.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
